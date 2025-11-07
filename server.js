@@ -1,5 +1,5 @@
 import express from "express";
-import puppeteer from "puppeteer";
+import generatePDF from "./generater/pdfgenerationEngine.js";
 const app = express();
 
 
@@ -7,11 +7,16 @@ app.use(express.json())
 
 // invoice setup 
 
+//data
 import invoiceDataFromDoc from './models/Invoice_data/invoiceDataFromDoc.js'
+
+// templete
 import generateInvoiceHTML from './template/invoice/invoice.js'
 
 
 // policy setup 
+
+//data
 import bajajAllianzPolicyData from './models/Policy_data/bajajAllianzPolicyData.js'
 import digitCarPolicyData from './models/Policy_data/digitCarPolicyData.js';
 import libertyCommercialPolicyData from './models/Policy_data/libertyCommercialPolicyData.js'
@@ -26,7 +31,7 @@ import universalSompoPolicyData from './models/Policy_data/universalSompoPolicyD
 import zurichKotakPolicyData from './models/Policy_data/zurichKotakPolicyData.js'
 
 
-
+// templete 
 import generateBajajAllianzCarPolicyHTML from './template/policy/generateBajajAllianzCarPolicyHTML.js';
 import generateDigitCarPolicyHTML from './template/policy/generateDigitCarPolicyHTML.js'
 import generateLibertyCommercialPolicyHTML from './template/policy/generateLibertyCommercialPolicyHTML.js'
@@ -56,22 +61,6 @@ const policyGenerators = {
     'Universal Sompo General Insurance': [generateUniversalSompoPolicyHTML, universalSompoPolicyData],
     'Zurich Kotak General Insurance': [generateZurichKotakPolicyHTML, zurichKotakPolicyData]
 };
-
-async function generatePDF(htmlContent, outputFile = "output.pdf") {
-    try {
-        const browser = await puppeteer.launch();
-        const page = await browser.newPage();
-        await page.setContent(htmlContent, { waitUntil: "networkidle0" });
-        // generate PDF from page content
-        const pdf = await page.pdf({ path: outputFile, format: "A4" });
-        await browser.close();
-        console.log(`pdf created at: ${outputFile}`);
-        return pdf;
-    }
-    catch (err) {
-        throw new Error(`PDF generation error: ${err.message}`);
-    }
-}
 
 app.get("/generate-pdf", async (req, res) => {
     const { policyNo, insuredName, invoiceDate, invoiceNumber } = req.body
