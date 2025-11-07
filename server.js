@@ -7,23 +7,23 @@ app.use(express.json())
 
 // invoice setup 
 
-import invoiceDataFromDoc from './models/invoiceDataFromDoc.js'
+import invoiceDataFromDoc from './models/Invoice_data/invoiceDataFromDoc.js'
 import generateInvoiceHTML from './template/invoice/invoice.js'
 
 
 // policy setup 
-import bajajAllianzPolicyData from './models/bajajAllianzPolicyData.js'
-import digitCarPolicyData from './models/digitCarPolicyData.js';
-import libertyCommercialPolicyData from './models/libertyCommercialPolicyData.js'
-import magmaHDICVPolicyData from './models/magmaHDICVPolicyData.js'
-import newIndiaPolicyData from './models/newIndiaPolicyData.js'
-import reliancePolicyData from './models/reliancePolicyData.js'
-import royalSundaramPolicyData from './models/royalSundaramPolicyData.js'
-import sbiGeneralPolicyData from './models/sbiGeneralPolicyData.js'
-import shriramGICVPolicyData from './models/shriramGICVPolicyData.js'
-import tataAgipolicyData from './models/tataAgipolicydata.js'
-import universalSompoPolicyData from './models/universalSompoPolicyData.js'
-import zurichKotakPolicyData from './models/zurichKotakPolicyData.js'
+import bajajAllianzPolicyData from './models/Policy_data/bajajAllianzPolicyData.js'
+import digitCarPolicyData from './models/Policy_data/digitCarPolicyData.js';
+import libertyCommercialPolicyData from './models/Policy_data/libertyCommercialPolicyData.js'
+import magmaHDICVPolicyData from './models/Policy_data/magmaHDICVPolicyData.js'
+import newIndiaPolicyData from './models/Policy_data/newIndiaPolicyData.js'
+import reliancePolicyData from './models/Policy_data/reliancePolicyData.js'
+import royalSundaramPolicyData from './models/Policy_data/royalSundaramPolicyData.js'
+import sbiGeneralPolicyData from './models/Policy_data/sbiGeneralPolicyData.js'
+import shriramGICVPolicyData from './models/Policy_data/shriramGICVPolicyData.js'
+import tataAgipolicyData from './models/Policy_data/tataAgipolicydata.js'
+import universalSompoPolicyData from './models/Policy_data/universalSompoPolicyData.js'
+import zurichKotakPolicyData from './models/Policy_data/zurichKotakPolicyData.js'
 
 
 
