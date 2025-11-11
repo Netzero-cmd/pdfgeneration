@@ -240,3 +240,4 @@ function generateUniversalSompoQuoteHTML(data) {
 </body>
 </html>`;
 }
+export default generateUniversalSompoQuoteHTML;

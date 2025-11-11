@@ -133,3 +133,4 @@ function generateQuoteHTMLGoDigit(data) {
 </body>
 </html>`;
 }
+export default generateQuoteHTMLGoDigit;

@@ -144,3 +144,5 @@ function generateCancellationRequestHTML(data) {
 </body>
 </html>`;
 }
+
+export default generateCancellationRequestHTML;

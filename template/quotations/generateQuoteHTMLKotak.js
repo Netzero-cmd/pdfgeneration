@@ -163,3 +163,5 @@ function generateZurichKotakQuoteHTML(data) {
 </body>
 </html>`;
 }
+
+export default generateZurichKotakQuoteHTML;

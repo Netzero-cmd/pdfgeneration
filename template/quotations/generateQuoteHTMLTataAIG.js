@@ -202,3 +202,4 @@ function generateTataAIGQuoteHTML(data) {
 </body>
 </html>`;
 }
+export default generateTataAIGQuoteHTML;

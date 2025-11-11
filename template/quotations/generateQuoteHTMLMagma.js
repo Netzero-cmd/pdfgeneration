@@ -218,3 +218,4 @@ function generateMagmaQuoteHTML(data) {
 </body>
 </html>`;
 }
+export default generateMagmaQuoteHTML;

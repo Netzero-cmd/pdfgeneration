@@ -85,3 +85,4 @@ function generateRefundCancellationHTML(data) {
             </div>
         `;
 }
+export default generateRefundCancellationHTML;

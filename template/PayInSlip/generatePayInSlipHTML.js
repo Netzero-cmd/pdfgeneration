@@ -103,3 +103,4 @@ function generatePayInSlipHTML(data) {
 </body>
 </html>`;
 }
+export default generatePayInSlipHTML;

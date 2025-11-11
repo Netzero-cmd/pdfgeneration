@@ -31,7 +31,7 @@ const renderLiabilitySection = (section) => {
     `;
     return html;
 };
-function generateICICILombardEndorsementHTML(data) {
+function generateEndorsementHTML(data) {
     const { policyInfo, insured, valueChanges, premiumChange, finalPremiumSummary } = data;
     const internalCSS = `
         <style>
@@ -221,3 +221,4 @@ function generateICICILombardEndorsementHTML(data) {
 </body>
 </html>`;
 }
+export default generateEndorsementHTML;
